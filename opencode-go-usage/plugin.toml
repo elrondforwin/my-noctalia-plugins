@@ -1,0 +1,98 @@
+# OpenCode Usage — shows your OpenCode Zen usage (rolling / weekly / monthly)
+# on the bar, with a detail panel. The API key is stored in the desktop
+# keyring (Secret Service) and never written to plugin settings.
+
+id = "elrond/opencode-go-usage"
+name = "OpenCode Usage"
+version = "0.4.1"
+plugin_api = 19
+author = "elrond"
+license = "MIT"
+dependencies = []
+tags = ["usage", "monitor", "ai", "utility"]
+icon = "activity"
+description = "OpenCode Zen usage monitor: rolling / weekly / monthly percent on the bar, full details in a panel."
+
+[[widget]]
+id = "bar"
+entry = "widget.luau"
+
+  [[widget.setting]]
+  key = "label"
+  type = "string"
+  label_key = "settings.label.label"
+  description_key = "settings.label.description"
+  default = ""
+
+  [[widget.setting]]
+  key = "show_glyph"
+  type = "bool"
+  label_key = "settings.show_glyph.label"
+  description_key = "settings.show_glyph.description"
+  default = true
+
+  [[widget.setting]]
+  key = "glyph"
+  type = "glyph"
+  label_key = "settings.glyph.label"
+  description_key = "settings.glyph.description"
+  default = "activity"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 400
+height = 540
+placement = "attached"
+position = "auto"
+open_near_click = true
+
+[[service]]
+id = "usage"
+entry = "service.luau"
+
+[[setting]]
+key = "metric"
+type = "select"
+label_key = "settings.metric.label"
+description_key = "settings.metric.description"
+default = "monthly"
+options = [
+  { value = "rolling", label_key = "settings.metric.options.rolling" },
+  { value = "weekly", label_key = "settings.metric.options.weekly" },
+  { value = "monthly", label_key = "settings.metric.options.monthly" },
+]
+
+[[setting]]
+key = "refresh_minutes"
+type = "int"
+label_key = "settings.refresh_minutes.label"
+description_key = "settings.refresh_minutes.description"
+default = 15
+min = 1
+max = 1440
+
+[[setting]]
+key = "warn_threshold"
+type = "int"
+label_key = "settings.warn_threshold.label"
+description_key = "settings.warn_threshold.description"
+default = 70
+min = 0
+max = 100
+
+[[setting]]
+key = "critical_threshold"
+type = "int"
+label_key = "settings.critical_threshold.label"
+description_key = "settings.critical_threshold.description"
+default = 90
+min = 0
+max = 100
+
+[[setting]]
+key = "debug_mode"
+type = "bool"
+label_key = "settings.debug_mode.label"
+description_key = "settings.debug_mode.description"
+default = false

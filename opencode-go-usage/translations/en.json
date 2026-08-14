@@ -1,0 +1,87 @@
+{
+  "title": "OpenCode Usage",
+  "metric": {
+    "rolling": "Rolling",
+    "weekly": "Weekly",
+    "monthly": "Monthly"
+  },
+  "status": {
+    "ok": "OK",
+    "unconfigured": "No API key set"
+  },
+  "widget": {
+    "set_key": "Set key",
+    "click_hint": "Click for details"
+  },
+  "tooltip": {
+    "metric": "Metric",
+    "used": "Used",
+    "status": "Status",
+    "resets": "Resets",
+    "updated": "Updated",
+    "error": "Error",
+    "action": "Action"
+  },
+  "settings": {
+    "label": {
+      "label": "Label",
+      "description": "Text shown before the percent in the bar. Empty shows just the percent."
+    },
+    "show_glyph": {
+      "label": "Show glyph",
+      "description": "Show a glyph before the bar text."
+    },
+    "glyph": {
+      "label": "Glyph",
+      "description": "Glyph shown before the bar text."
+    },
+    "metric": {
+      "label": "Bar metric",
+      "description": "Which usage window the bar and panel hero show: rolling (24h), weekly, or monthly.",
+      "options": {
+        "rolling": "Rolling",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      }
+    },
+    "refresh_minutes": {
+      "label": "Refresh interval (minutes)",
+      "description": "How often the plugin re-fetches usage from the API."
+    },
+    "warn_threshold": {
+      "label": "Warning threshold (%)",
+      "description": "Usage at or above this percent turns yellow."
+    },
+    "critical_threshold": {
+      "label": "Critical threshold (%)",
+      "description": "Usage at or above this percent turns red."
+    },
+    "debug_mode": {
+      "label": "Debug mode",
+      "description": "Skip the API and control each window's percent from the panel (no API key required)."
+    }
+  },
+  "panel": {
+    "title": "OpenCode Usage",
+    "refresh_tooltip": "Refresh now",
+    "resets_in": "Resets in {time}",
+    "resets_now": "now",
+    "updated_at": "Updated {time}",
+    "unconfigured_title": "No API key",
+    "unconfigured_desc": "Store your OpenCode Go API key in the desktop keyring to fetch usage.",
+    "key_input_placeholder": "Paste OPENCODE_GO_API_KEY…",
+    "save_key": "Save key",
+    "change_key": "Change key",
+    "change_key_title": "Change API key",
+    "debug_title": "Debug mode",
+    "debug_desc": "API is skipped — set each window's percent to test the colors and the bar."
+  },
+  "error": {
+    "http": "HTTP {status}",
+    "invalid_key": "Invalid API key (401)",
+    "parse": "Couldn't parse the response",
+    "offline": "Request failed — check the network or offline mode",
+    "secret_tool_missing": "secret-tool not found — install libsecret-tools",
+    "keyring_store_failed": "Couldn't store the key in the keyring (is it unlocked?)"
+  }
+}
