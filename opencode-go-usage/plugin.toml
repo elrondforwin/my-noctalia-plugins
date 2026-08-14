@@ -1,4 +1,4 @@
-# OpenCode Usage — shows your OpenCode Zen usage (rolling / weekly / monthly)
+# OpenCode Usage shows your OpenCode Go usage (rolling / weekly / monthly)
 # on the bar, with a detail panel. The API key is stored in the desktop
 # keyring (Secret Service) and never written to plugin settings.
 
@@ -11,7 +11,7 @@ license = "MIT"
 dependencies = []
 tags = ["ai", "utility"]
 icon = "activity"
-description = "OpenCode Zen usage monitor: rolling / weekly / monthly percent on the bar, full details in a panel."
+description = "OpenCode Go usage monitor: rolling / weekly / monthly percent on the bar, full details in a panel."
 
 [[widget]]
 id = "bar"
