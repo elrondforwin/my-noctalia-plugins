@@ -9,7 +9,7 @@ plugin_api = 19
 author = "elrond"
 license = "MIT"
 dependencies = []
-tags = ["usage", "monitor", "ai", "utility"]
+tags = ["ai", "utility"]
 icon = "activity"
 description = "OpenCode Zen usage monitor: rolling / weekly / monthly percent on the bar, full details in a panel."
 

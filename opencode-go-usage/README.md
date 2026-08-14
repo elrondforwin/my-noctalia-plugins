@@ -6,19 +6,12 @@ the desktop keyring (Secret Service) and never written to plugin settings.
 
 ## Plugin
 
-<!-- Copy ids exactly from plugin.toml. Remove rows that do not apply. -->
-
 | Field | Value |
 | --- | --- |
 | ID | `elrond/opencode-go-usage` |
 | Entries | Bar widget: `bar`; panel: `panel`; service: `usage` |
 
 ## Requirements
-
-<!-- Required when plugin.toml declares dependencies. Mention every dependency
-     using its exact manifest name, for example `example-cli`. Include any
-     authentication, hardware, service, or compositor requirements too. Remove
-     this section only when the plugin has no requirements. -->
 
 - `secret-tool` on `PATH` (generally package `libsecret-tools`) to store and read the
   API key.
@@ -41,10 +34,6 @@ noctalia msg panel-toggle elrond/opencode-go-usage:panel
 
 ## Settings
 
-<!-- Required when plugin.toml declares settings. Describe behavior and units,
-     especially for settings whose effect is not obvious from the label. A
-     table like the official plugin READMEs is recommended. -->
-
 | Setting | Type | Default | Description |
 | --- | --- | --- | --- |
 | `label` | `string` | `""` | Text shown before the percent in the bar. Empty shows just the percent. |
@@ -57,10 +46,6 @@ noctalia msg panel-toggle elrond/opencode-go-usage:panel
 | `debug_mode` | `bool` | `false` | Skip the API and control each window's percent from the panel (no API key required). |
 
 ## Notes
-
-<!-- Optional. Document important side effects and limitations: network access,
-     files written, commands spawned, sensitive data, compositor support, and
-     useful debugging information. -->
 
 - The API key is stored in the desktop keyring (Secret Service) via
   `secret-tool`, never in plugin settings or files.
